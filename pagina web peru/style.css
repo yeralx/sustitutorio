@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "widget-1 widget-2 sidebar"
+						 "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .header {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #fAA43D;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #55a8fd;
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .widget-1 {
+	grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+}
+
+.contenedor .footer {
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+}
+
+
+
+
+.footer .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+
+}
+
+
+.footer .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    
+}
+
+
+.footer .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+    
+}
+
+.footer .grupo-1 .red-social a:hover{
+    color: rgb(117, 54, 117);
+}
+
+.footer .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .grupo-2 small{
+    font-size: 15px;
+    
+}
+
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-1 widget-2"
+						 "footer footer footer";
+	}
+}
+
+
